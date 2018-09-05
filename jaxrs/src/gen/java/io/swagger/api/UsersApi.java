@@ -8,6 +8,7 @@ import io.swagger.annotations.ApiParam;
 import io.swagger.jaxrs.*;
 
 import io.swagger.model.InlineResponse200;
+import io.swagger.model.InlineResponse404;
 
 import java.util.Map;
 import java.util.List;
@@ -74,7 +75,9 @@ public class UsersApi  {
     
     @io.swagger.annotations.ApiOperation(value = "sample", notes = "sample", response = Void.class, tags={  })
     @io.swagger.annotations.ApiResponses(value = { 
-        @io.swagger.annotations.ApiResponse(code = 200, message = "OK", response = Void.class) })
+        @io.swagger.annotations.ApiResponse(code = 200, message = "OK", response = Void.class),
+        
+        @io.swagger.annotations.ApiResponse(code = 404, message = "Endpoint Not found Please make sure you have the right endpoint", response = InlineResponse404.class) })
     public Response usersPost(@Context SecurityContext securityContext)
     throws NotFoundException {
         return delegate.usersPost(securityContext);

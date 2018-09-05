@@ -4,6 +4,7 @@ import io.swagger.api.*;
 import io.swagger.model.*;
 
 import io.swagger.model.InlineResponse200;
+import io.swagger.model.InlineResponse404;
 
 import java.util.List;
 import io.swagger.api.NotFoundException;
