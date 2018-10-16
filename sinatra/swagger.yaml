@@ -4,6 +4,14 @@ info:
   description: "post and pull employee information"
   version: "0.0.2"
   title: "HRAPI3.3.0"
+  contact:
+    name: "Temil"
+    url: "http://myapiHR.io"
+    email: "t.s@sb.com"
+host: "virtserver.swaggerhub.com"
+basePath: "/SE-Design/HR_Temil/0.0.2"
+schemes:
+- "https"
 paths:
   /users:
     get:

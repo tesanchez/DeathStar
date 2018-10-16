@@ -1,7 +1,7 @@
 require 'json'
 
 
-MyApp.add_route('DELETE', '/users', {
+MyApp.add_route('DELETE', '/SE-Design/HR_Temil/0.0.2/users', {
   "resourcePath" => "/Default",
   "summary" => "",
   "nickname" => "users_delete", 
@@ -17,7 +17,7 @@ MyApp.add_route('DELETE', '/users', {
 end
 
 
-MyApp.add_route('GET', '/users', {
+MyApp.add_route('GET', '/SE-Design/HR_Temil/0.0.2/users', {
   "resourcePath" => "/Default",
   "summary" => "",
   "nickname" => "users_get", 
@@ -60,7 +60,7 @@ MyApp.add_route('GET', '/users', {
 end
 
 
-MyApp.add_route('POST', '/users', {
+MyApp.add_route('POST', '/SE-Design/HR_Temil/0.0.2/users', {
   "resourcePath" => "/Default",
   "summary" => "",
   "nickname" => "users_post", 
