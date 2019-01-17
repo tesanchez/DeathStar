@@ -5,7 +5,6 @@ import io.swagger.model.*;
 
 import io.swagger.model.InlineResponse200;
 import io.swagger.model.InlineResponse404;
-import io.swagger.model.InlineResponse500;
 
 import java.util.List;
 import io.swagger.api.NotFoundException;
@@ -18,9 +17,14 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 import javax.validation.constraints.*;
 
-public class BooksApiServiceImpl extends BooksApiService {
+public class UsersApiServiceImpl extends UsersApiService {
     @Override
-    public Response booksGet( String title,  Boolean fullMatch,  Integer authorID, SecurityContext securityContext) throws NotFoundException {
+    public Response usersGet( @NotNull String UUID,  String firstName,  String lastName, SecurityContext securityContext) throws NotFoundException {
+        // do some magic!
+        return Response.ok().entity(new ApiResponseMessage(ApiResponseMessage.OK, "magic!")).build();
+    }
+    @Override
+    public Response usersPost(SecurityContext securityContext) throws NotFoundException {
         // do some magic!
         return Response.ok().entity(new ApiResponseMessage(ApiResponseMessage.OK, "magic!")).build();
     }

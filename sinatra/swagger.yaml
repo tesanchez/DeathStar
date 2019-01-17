@@ -1,0 +1,112 @@
+---
+swagger: "2.0"
+info:
+  description: "post and pull employee information"
+  version: "0.0.2"
+  title: "HRAPI3.3.0"
+  contact:
+    name: "Temil"
+    url: "http://myapiHR.io"
+    email: "t.s@sb.com"
+host: "virtserver.swaggerhub.com"
+basePath: "/SE-Design/HR_Temil/0.0.2"
+schemes:
+- "https"
+paths:
+  /users:
+    get:
+      description: "Allows users to get employees"
+      parameters:
+      - name: "UUID"
+        in: "query"
+        description: "UUID number of employee"
+        required: true
+        type: "string"
+      - name: "first_name"
+        in: "query"
+        description: "Users first name"
+        required: false
+        type: "string"
+      - name: "last_name"
+        in: "query"
+        description: "Users last name"
+        required: false
+        type: "string"
+      responses:
+        200:
+          description: "OK"
+          schema:
+            type: "object"
+            properties:
+              status:
+                type: "integer"
+                example: 200
+                description: "Status code"
+              UUID:
+                type: "string"
+                format: "uuid"
+                example: "3110-78-8832"
+                description: "ID from DB"
+              first_name:
+                type: "string"
+                example: "James"
+                description: "Users first name"
+              last_name:
+                type: "string"
+                example: "Stevens"
+                description: "Users last name"
+              email:
+                type: "string"
+                example: "j_stevens@sb.com"
+                description: "Users email"
+              join_date:
+                type: "string"
+                example: "1511884800"
+                description: "Unix timestamp of user posted to DB"
+    post:
+      description: "Post"
+      parameters: []
+      responses:
+        200:
+          description: "OK"
+    delete:
+      description: "delete"
+      parameters: []
+      responses:
+        200:
+          description: "OK"
+definitions:
+  inline_response_200:
+    properties:
+      status:
+        type: "integer"
+        example: 200
+        description: "Status code"
+      UUID:
+        type: "string"
+        format: "uuid"
+        example: "3110-78-8832"
+        description: "ID from DB"
+      first_name:
+        type: "string"
+        example: "James"
+        description: "Users first name"
+      last_name:
+        type: "string"
+        example: "Stevens"
+        description: "Users last name"
+      email:
+        type: "string"
+        example: "j_stevens@sb.com"
+        description: "Users email"
+      join_date:
+        type: "string"
+        example: "1511884800"
+        description: "Unix timestamp of user posted to DB"
+    example:
+      join_date: "1511884800"
+      last_name: "Stevens"
+      UUID: "3110-78-8832"
+      first_name: "James"
+      email: "j_stevens@sb.com"
+      status: 200
