@@ -1,0 +1,52 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "Gets users from HR DB",
+    "version" : "1.0",
+    "title" : "HR API1"
+  },
+  "host" : "virtserver.swaggerhub.com",
+  "basePath" : "/SE-Design/HRAPI123/1.0",
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/user" : {
+      "get" : {
+        "summary" : "Sample users from db.",
+        "description" : "Gets users for HR.",
+        "parameters" : [ {
+          "name" : "name",
+          "in" : "query",
+          "description" : "name of user",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "name" : {
+                  "type" : "string",
+                  "example" : "Temil",
+                  "description" : "Name of user."
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "inline_response_200" : {
+      "properties" : {
+        "name" : {
+          "type" : "string",
+          "example" : "Temil",
+          "description" : "Name of user."
+        }
+      }
+    }
+  }
+}
