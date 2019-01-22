@@ -15,10 +15,10 @@ public class Bootstrap extends HttpServlet {
   public void init(ServletConfig config) throws ServletException {
     Info info = new Info()
       .title("Swagger Server")
-      .description("post and pull employee information")
+      .description("Get Users from DB")
       .termsOfService("")
       .contact(new Contact()
-        .email(""))
+        .email("t.s@sb.com"))
       .license(new License()
         .name("")
         .url("http://unlicense.org"));
