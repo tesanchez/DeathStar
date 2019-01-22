@@ -33,12 +33,44 @@
                 }
               }
             }
+          },
+          "404" : {
+            "description" : "server error",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "status" : {
+                  "type" : "integer",
+                  "example" : 404,
+                  "description" : "status code"
+                },
+                "message" : {
+                  "type" : "string",
+                  "example" : "Resource not found Please try different",
+                  "description" : "status string"
+                }
+              }
+            }
           }
         }
       }
     }
   },
   "definitions" : {
+    "inline_response_404" : {
+      "properties" : {
+        "status" : {
+          "type" : "integer",
+          "example" : 404,
+          "description" : "status code"
+        },
+        "message" : {
+          "type" : "string",
+          "example" : "Resource not found Please try different",
+          "description" : "status string"
+        }
+      }
+    },
     "inline_response_200" : {
       "properties" : {
         "name" : {
