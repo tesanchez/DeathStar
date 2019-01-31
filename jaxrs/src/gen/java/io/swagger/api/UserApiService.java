@@ -16,8 +16,7 @@ import java.io.InputStream;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 import javax.validation.constraints.*;
-
-public abstract class UsersApiService {
-    public abstract Response usersGet( @NotNull String UUID, String firstName, String lastName,SecurityContext securityContext) throws NotFoundException;
-    public abstract Response usersPost(SecurityContext securityContext) throws NotFoundException;
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaJerseyServerCodegen", date = "2019-01-22T15:48:06.895Z")
+public abstract class UserApiService {
+    public abstract Response userGet( @NotNull String name,SecurityContext securityContext) throws NotFoundException;
 }

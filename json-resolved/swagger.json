@@ -1,0 +1,89 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "Gets users from HR DB",
+    "version" : "1.0",
+    "title" : "HR API1",
+    "contact" : {
+      "name" : "TEmil",
+      "url" : "http://myapi.com",
+      "email" : "t.s@sb.com"
+    }
+  },
+  "host" : "virtserver.swaggerhub.com",
+  "basePath" : "/SE-Design/HRAPI123/1.0",
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/user" : {
+      "get" : {
+        "summary" : "Sample users from db.",
+        "description" : "Gets users for HR.",
+        "parameters" : [ {
+          "name" : "name",
+          "in" : "query",
+          "description" : "name of user",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "name" : {
+                  "type" : "string",
+                  "example" : "Temil",
+                  "description" : "Name of user."
+                }
+              }
+            }
+          },
+          "404" : {
+            "description" : "server error",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "status" : {
+                  "type" : "integer",
+                  "example" : 404,
+                  "description" : "status code"
+                },
+                "message" : {
+                  "type" : "string",
+                  "example" : "Resource not found Please try different",
+                  "description" : "status string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "inline_response_404" : {
+      "properties" : {
+        "status" : {
+          "type" : "integer",
+          "example" : 404,
+          "description" : "status code"
+        },
+        "message" : {
+          "type" : "string",
+          "example" : "Resource not found Please try different",
+          "description" : "status string"
+        }
+      }
+    },
+    "inline_response_200" : {
+      "properties" : {
+        "name" : {
+          "type" : "string",
+          "example" : "Temil",
+          "description" : "Name of user."
+        }
+      }
+    }
+  }
+}
