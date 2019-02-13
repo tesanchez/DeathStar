@@ -1,0 +1,80 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "Gets users from DB",
+    "version" : "1.0.0",
+    "title" : "Sample",
+    "contact" : {
+      "name" : "Temil Sanchez",
+      "url" : "http://localhost.com",
+      "email" : "t.s@smartbear.com"
+    }
+  },
+  "host" : "virtserver.swaggerhub.com",
+  "basePath" : "/SE-Design/TemilHR/0.1",
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/user" : {
+      "get" : {
+        "summary" : "Gets Users.",
+        "description" : "Gets Users from employee db.",
+        "parameters" : [ {
+          "name" : "name",
+          "in" : "query",
+          "description" : "employee",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "name" : {
+                  "type" : "string",
+                  "example" : "Temil Sanchez",
+                  "description" : "user name"
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "Invalid request",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "message" : {
+                  "type" : "string",
+                  "example" : "Please make sure that the Request has the correct input and structure"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "inline_response_200" : {
+      "properties" : {
+        "name" : {
+          "type" : "string",
+          "example" : "Temil Sanchez",
+          "description" : "user name"
+        }
+      },
+      "example" : {
+        "name" : "Temil Sanchez"
+      }
+    },
+    "inline_response_400" : {
+      "properties" : {
+        "message" : {
+          "type" : "string",
+          "example" : "Please make sure that the Request has the correct input and structure"
+        }
+      }
+    }
+  }
+}
